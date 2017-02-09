@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.deucks.partyplayr.QueActivity"
+    tools:showIn="@layout/activity_que">
+
+    
+    <RelativeLayout
+        android:id="@+id/youtube_player_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/youtube_video"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/player_no_host_image"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_below="@id/youtube_player_container"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoDragView="@+id/dragView"
+        sothree:umanoOverlay="true"
+        sothree:umanoPanelHeight="68dp"
+        sothree:umanoParalaxOffset="100dp"
+        sothree:umanoShadowHeight="4dp">
+
+
+        <!-- MAIN CONTENT -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/music_que_upnext_nowplaying_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/now_playing_text"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/music_que_upnext_card_layout"
+                android:layout_below="@id/music_que_upnext_nowplaying_text"
+                android:layout_width="match_parent"
+                app:cardUseCompatPadding="true"
+                android:layout_height="80dp">
+
+                <RelativeLayout
+                    android:id="@+id/music_que_upnext_title_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/music_que_upnext_title_image"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp" />
+
+                    <TextView
+                        android:id="@+id/music_que_upnext_title_text"
+                        android:layout_toRightOf="@id/music_que_upnext_title_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:paddingTop="2dp"
+                        android:paddingLeft="10dp"
+                        android:height="27dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/music_que_upnext_title_artist"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/music_que_upnext_title_image"
+                        android:layout_below="@id/music_que_upnext_title_text"
+                        android:textSize="10sp"
+                        android:paddingLeft="10dp"
+                        android:layout_marginBottom="3dp" />
+
+
+                    <ImageView
+                        android:id="@+id/music_que_upnext_title_submitter_img"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_toRightOf="@id/music_que_upnext_title_image"
+                        android:layout_below="@id/music_que_upnext_title_artist"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp" />
+
+                    <TextView
+                        android:id="@+id/music_que_upnext_title_submitter_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/music_que_upnext_title_submitter_img"
+                        android:layout_below="@id/music_que_upnext_title_artist"
+                        android:layout_marginTop="4dp"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="5dp" />
+
+
+
+
+                </RelativeLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <Button
+                android:id="@+id/content_que_play_music_button"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/music_que_upnext_card_layout"
+                android:background="@drawable/rounded_button_style_playmusic"
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@+id/content_que_dislikebutton"
+                android:layout_marginRight="70dp"
+                android:onClick="playCurrentMusic"
+                android:layout_marginTop="-30dp" />
+            <Button
+                android:id="@+id/content_que_pause_music_button"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/music_que_upnext_card_layout"
+                android:background="@drawable/rounded_button_style_pausemusic"
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@+id/content_que_dislikebutton"
+                android:layout_marginRight="70dp"
+                android:onClick="pauseCurrentMusic"
+                android:layout_marginTop="-30dp" />
+
+
+
+
+
+            <Button
+                android:id="@+id/content_que_dislikebutton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/music_que_upnext_card_layout"
+                android:background="@drawable/rounded_button_style_dislikemusic"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-30dp"
+                android:onClick="dislikeCurrentMusic"
+                android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+            <TextView
+                android:id="@+id/music_que_upnext_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/up_next"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/music_que_upnext_card_layout"
+
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/music_que_recylcer"
+                android:layout_below="@id/music_que_upnext_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+        <!-- SLIDING LAYOUT -->
+        <LinearLayout
+            android:id="@+id/dragView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:focusable="false"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/que_activ_dragger_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="16dp"
+                android:background="@color/bg_screen1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+
+                    android:text="@string/add_songs"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btn_hide"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:gravity="center_vertical|right"
+                    android:background="@drawable/close_icon"
+                    android:layout_marginRight="10dp"
+                    android:onClick="hideMusicSearch"
+                    android:textSize="14sp"
+                    android:padding="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/que_activ_dragger_search_songs_layout"
+                android:layout_width="match_parent"
+                android:background="@color/dot_light_screen1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_password"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:theme="@style/TextLabel"
+                    android:textColorHint="@color/colorWhite"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/que_active_youtube_search_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/search_for_a_song"
+                        android:textColorHint="@color/colorWhite"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="30sp"
+                        android:inputType="text" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/music_que_search_recycler"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/que_activ_add_music_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:src="@drawable/fab_plus" />
+
+</RelativeLayout>

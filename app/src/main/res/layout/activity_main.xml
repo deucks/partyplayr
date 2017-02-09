@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/zero"
+    android:paddingLeft="@dimen/zero"
+    android:paddingRight="@dimen/zero"
+    android:paddingTop="@dimen/zero"
+    tools:context="com.deucks.partyplayr.MainActivity">
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activ_main_content"
+        android:background="@color/bg_screen1"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="0dp">
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/login_logo"/>
+
+            <TextView
+                android:id="@+id/activ_main_party_started"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:text="@string/get_the_party_started"/>
+
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/partyplayr_logo"/>
+
+            <Button
+                android:id="@+id/create_party_button"
+                android:layout_width="257dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/dot_light_screen1"
+                android:textSize="20sp"
+                android:text="@string/create_party"
+                android:textAllCaps="false"
+                android:onClick="createParty"
+                android:paddingBottom="10dp"
+                android:textColor="@color/colorWhite"
+                android:paddingLeft="20dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp" />
+
+            <Button
+                android:id="@+id/main_join_party_button"
+                android:layout_width="257dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/dot_light_screen1"
+                android:textSize="20sp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="@string/join_party"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:paddingBottom="10dp"
+                android:onClick="joinParty"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+
+                android:paddingTop="5dp" />
+
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/dot_light_screen1"
+                android:textSize="20sp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" />
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

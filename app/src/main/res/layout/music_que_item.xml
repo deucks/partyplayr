@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        card_view:cardElevation="0dp"
+        card_view:hardwareAccelerated ="false"
+        app:cardUseCompatPadding="true"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/music_que_img"
+                android:layout_width="75dp"
+                android:layout_height="75dp" />
+
+            <TextView
+                android:id="@+id/music_que_name"
+                android:layout_toRightOf="@id/music_que_img"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="2dp"
+                android:paddingLeft="10dp"
+                android:height="27dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/music_que_artist"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/music_que_img"
+                android:layout_below="@id/music_que_name"
+                android:textSize="10sp"
+                android:paddingLeft="10dp"
+                android:layout_marginBottom="3dp" />
+
+
+            <ImageView
+                android:id="@+id/music_que_submitter_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_toRightOf="@id/music_que_img"
+                android:layout_below="@id/music_que_artist"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp" />
+
+            <TextView
+                android:id="@+id/music_que_submitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/music_que_submitter_image"
+                android:layout_below="@id/music_que_artist"
+                android:layout_marginTop="4dp"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

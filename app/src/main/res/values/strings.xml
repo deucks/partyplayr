@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">partyplayr</string>
+    <string name="title_activity_que">QueActivity</string>
+    <string name="facebook_app_id">1747217812213129</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Jukebox From The Future</string>
+    <string name="slide_1_desc">Give your party the ability to curate and control the music!</string>
+
+    <string name="slide_2_title">Everyone Has A Say</string>
+    <string name="slide_2_desc">Everyone can downvote tracks they dont like, remove your own songs from the queue at any time.</string>
+
+    <string name="slide_3_title">Host Has The Power</string>
+    <string name="slide_3_desc">Gain the ability to kick, add, play, pause and skip the current que.</string>
+
+    <string name="slide_4_title">Keep On Partying!</string>
+    <string name="slide_4_desc">Invite all your friends, they can curate from any device!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="join_party">Join Party</string>
+    <string name="create_party">Create Party</string>
+    <string name="empty" />
+    <string name="join_the_party">, Join The Party!</string>
+    <string name="enter_the_party_code">Enter The Party Code</string>
+    <string name="get_the_party_started">Get The Party Started</string>
+    <string name="comma_seperation">", "</string>
+    <string name="add_songs">Add Songs</string>
+    <string name="search_for_a_song">Search For A Song!</string>
+    <string name="just_second_string">Just a second</string>
+    <string name="sweet_tracks_string">Searching for sweet tracks</string>
+    <string name="now_playing_text">Now Playing</string>
+    <string name="up_next">Up Next</string>
+    <string name="what_is_your_party_name">What Is Your Party Name?</string>
+    <string name="start_the_party">, Start The Party!</string>
+    <string name="could_not_create_party_string">Could not create party :( Try again later</string>
+    <string name="progress_create_party_string">Creating The Party</string>
+    <string name="just_a_sec_string">Just A Sec...</string>
+
+    <string name="finding_party_string">Finding The Party</string>
+    <string name="could_not_join_party_string">Could not join party :( Is the correct code entered?</string>
+    <string name="snackbar_action_string">Action</string>
+    <string name="null_string">null</string>
+    <string name="empty_space_string">" "</string>
+    <string name="syncing_text">Syncing</string>
+    <string name="loading_tracks_tracks">Loading Tracks</string>
+    <string name="you_are_host_string">"You are the Host, code is "</string>
+    <string name="no_host_string">" is playing the music, code is "</string>
+    <string name="start_the_party_string">Start The Party</string>
+    <string name="create_party_desc_text">Enter what you want your party to be called. The name will be visible to people who join your party.</string>
+    <string name="join_the_party_string">Join The Party</string>
+    <string name="join_party_desc_string">Enter the code your party host has given you. This will let you join the party.</string>
+    <string name="already_disliked_string">You have already disliked this video</string>
+</resources>

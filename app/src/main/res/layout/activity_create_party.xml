@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.deucks.partyplayr.CreateParty">
+
+    <RelativeLayout
+        android:id="@+id/create_party_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_screen1"
+        android:paddingBottom="35dp"
+        android:paddingTop="25dp">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/create_party_toolbar"
+            android:layout_height="wrap_content"
+            android:titleTextColor="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="@string/empty"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/create_party_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/create_party_toolbar"
+            android:text="@string/start_the_party_string"
+            android:textColor="@color/colorWhite"
+            android:textSize="35sp"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="20dp" />
+        <TextView
+            android:layout_below="@id/create_party_title"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="@string/create_party_desc_text"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/create_party_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/create_party_input_layout_password"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/create_party_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="@string/what_is_your_party_name"
+
+                android:textSize="30sp"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/create_party_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:src="@drawable/ic_check" />
+
+</RelativeLayout>
